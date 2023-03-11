@@ -1,0 +1,67 @@
+kodai@Yamato:~/springex/060408_github$ ls -a
+.  ..  .git  .gitignore  venv
+kodai@Yamato:~/springex/060408_github$ touch index.html
+kodai@Yamato:~/springex/060408_github$ git add .
+kodai@Yamato:~/springex/060408_github$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .gitignore
+        new file:   index.html
+
+kodai@Yamato:~/springex/060408_github$ git commit -m "first commit"
+[main (root-commit) e823119] first commit
+ 2 files changed, 3 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 index.html
+kodai@Yamato:~/springex/060408_github$ git branch -M main
+kodai@Yamato:~/springex/060408_github$ git remote add origin https://github.com/HenrySpock/060408_github.git
+kodai@Yamato:~/springex/060408_github$ git push -u origin main
+Username for 'https://github.com': HenrySpock
+Password for 'https://HenrySpock@github.com':
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 290 bytes | 145.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/HenrySpock/060408_github.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'. 
+kodai@Yamato:~/springex/060408_github$ git branch
+* main 
+kodai@Yamato:~/springex/060408_github$ git branch secondary
+kodai@Yamato:~/springex/060408_github$ git checkout secondary
+Switched to branch 'secondary'
+kodai@Yamato:~/springex/060408_github$ ls
+index.html  venv
+kodai@Yamato:~/springex/060408_github$ git status
+On branch secondary
+nothing to commit, working tree clean
+kodai@Yamato:~/springex/060408_github$ touch style.css script.js 
+kodai@Yamato:~/springex/060408_github$ git add .
+kodai@Yamato:~/springex/060408_github$ git commit -m "secondary"
+[secondary 6b7f5bb] secondary
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 script.js
+ create mode 100644 style.css
+kodai@Yamato:~/springex/060408_github$ git push -u origin secondary
+Username for 'https://github.com': HenrySpock
+Password for 'https://HenrySpock@github.com':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 298 bytes | 149.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'secondary' on GitHub by visiting:
+remote:      https://github.com/HenrySpock/060408_github/pull/new/secondary
+remote:
+To https://github.com/HenrySpock/060408_github.git
+ * [new branch]      secondary -> secondary
+Branch 'secondary' set up to track remote branch 'secondary' from 'origin'.
+kodai@Yamato:~/springex/060408_github$
